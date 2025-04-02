@@ -6,30 +6,25 @@ This project utilizes machine learning techniques to analyze and predict medical
 ## Dataset
 The dataset used in this project (`Medical_insurance.csv`) contains the following features:
 - `age`: Age of the individual
-- `sex`: Gender (converted to numerical values)
+- `sex`: Gender 
 - `bmi`: Body Mass Index
 - `children`: Number of children
-- `smoker`: Smoking status (converted to numerical values)
-- `region`: Region of residence (encoded numerically)
+- `smoker`: Smoking status 
+- `region`: Region of residence
 - `charges`: Medical insurance cost (target variable)
 
-## Data Preprocessing
+## Data Preprocessing and Exploratory Data Analysis (EDA)
 - Checked for missing values.
 - Converted categorical data (`sex`, `smoker`, `region`) into numerical values.
 - Generated visualizations to understand feature relationships.
 - Computed correlation heatmap to identify redundant features.
-
-## Exploratory Data Analysis (EDA)
-- Line plots to examine relationships between `age`, `bmi`, and `charges`.
-- Bar plots for categorical features (`sex`, `region`, `smoker`, `children`) to analyze their effect on charges.
-- Heatmap to explore correlations among numerical features.
-
+- 
 ## Machine Learning Models
 Two regression models were trained to predict medical insurance costs:
 1. **RandomForestRegressor**
 2. **XGBRegressor** (Selected as the best model based on performance)
 
-### Model Training & Evaluation
+## Model Training and Evaluation
 - Split the dataset into training (80%) and testing (20%) sets.
 - Applied **RandomForestRegressor** and **XGBRegressor** models.
 - Evaluated models using **R² score**.
