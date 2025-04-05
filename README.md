@@ -13,6 +13,15 @@ The dataset used in this project (`Medical_insurance.csv`) contains the followin
 - `region`: Region of residence
 - `charges`: Medical insurance cost (target variable)
 
+## Requirements
+- Python 3.x
+- pandas
+- seaborn
+- matplotlib
+- scikit-learn
+- xgboost
+- joblib
+
 ## Data Preprocessing and Exploratory Data Analysis (EDA)
 - Checked for missing values.
 - Converted categorical data (`sex`, `smoker`, `region`) into numerical values.
@@ -30,13 +39,11 @@ Two regression models were trained to predict medical insurance costs:
 - Evaluated models using **R² score**.
 - **Cross-validation (10-fold)** was used to select the best model.
 - **XGBRegressor** was identified as the best-performing model.
-
-## Model Deployment
 - The final trained model (`XGBRegressor`) was saved using **Joblib**.
 - The model can be loaded and used for new predictions.
 
 ## Usage
-To use the trained model for prediction:
+To use the trained model for prediction, do
 ```python
 import joblib
 loaded_model = joblib.load("final_model_XGB.joblib")
@@ -50,15 +57,5 @@ print(predicted_charges)
 - **Smokers have significantly higher charges** than non-smokers.
 - **XGBRegressor outperforms RandomForestRegressor** in prediction accuracy.
 
-## Requirements
-- Python 3.x
-- pandas
-- seaborn
-- matplotlib
-- scikit-learn
-- xgboost
-- joblib
-
 ## Conclusion
 This project successfully applies machine learning to predict medical insurance costs. The use of feature engineering, exploratory data analysis, and model evaluation techniques ensures accurate predictions and valuable insights into healthcare costs.
-
